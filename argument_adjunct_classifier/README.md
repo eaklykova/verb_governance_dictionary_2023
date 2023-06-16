@@ -1,6 +1,7 @@
 From a theoretical linguistics perspective, participants in a clause can be categorized into two types: arguments (required for the grammatical correctness of a sentence or filled by a default value inferred from the context) and adjuncts (structurally dispensable) (see, for example, Dowty, 2003). For example, in the sentence  
 >Он заплатил за работу в евро. [ˈon zəplɐˈtʲil zə‿rɐˈbotʊ v‿ˈjevrə]  
->‘He paid for the work in euros.’  
+>‘He paid for the work in euros.’
+
 он [ˈon] ‘he’ and за работу [zə‿rɐˈbotʊ] ‘for the work’ are arguments, while в евро [v‿ˈjevrə] ‘in euros’ is an adjunct. Given that arguments, unlike adjuncts, are necessary for the grammaticality of a sentence, it is crucial to highlight them in the verb co-occurrences corpus.
 
 To automatically distinguish between arguments and adjuncts, data from FrameBank was used. FrameBank data includes a substantial number of tags for each construction, not all of which were necessary for our task. We kept the following features: predicate, dependent phrase, position of the dependent relative to the predicate, grammatical form of the dependent, and dependent type. Since FrameBank was not originally intended to differentiate between arguments and adjuncts, it was not yet possible to implement a filter capable of discerning such distinctions within larger tag groups like ‘Periphery’, which encompassed constructions of the type ‘preposition + noun’. As a result, our classification method focused on identifying subtypes of arguments, specifically subject and object types, which had already been tagged. The remaining groups were assigned a ‘CONSTR’ tag to facilitate classification.
